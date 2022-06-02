@@ -40,6 +40,8 @@ namespace ZXing.Mobile.CameraAccess
 			IsAnalyzing = false;
 			cameraEventListener.OnPreviewFrameReady -= HandleOnPreviewFrameReady;
 			cameraController.ShutdownCamera();
+			//Todo:By Freeze ❄️
+			BarcodeFound.Invoke(null);
 		}
 
 		public void SetupCamera()
